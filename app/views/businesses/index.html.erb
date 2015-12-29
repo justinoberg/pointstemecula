@@ -2,7 +2,7 @@
 
 <h1>Listing Businesses</h1>
 
-<table>
+<table class="table table-hover table-condensed">
   <thead>
     <tr>
       <th>Name</th>
@@ -22,8 +22,8 @@
         <td><%= business.phone %></td>
         <td><%= business.website %></td>
         <td><%= business.level %></td>
-        <td><%= link_to 'Show', business %></td>
-        <td><%= link_to 'Edit', edit_business_path(business) %></td>
+        <td><%= link_to 'Show', business, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_business_path(business), class: "btn btn-link" %></td>
         <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Business', new_business_path %>
+<%= link_to 'New Business', new_business_path, class: "btn btn-link" %>
